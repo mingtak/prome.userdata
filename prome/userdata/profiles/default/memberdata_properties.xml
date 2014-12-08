@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<object name="portal_memberdata" meta_type="Plone Memberdata Tool">
+ <property name="mobile" type="string"></property>
+ <property name="phone" type="string"></property>
+ <property name="address" type="string"></property>
+ <property name="idCardNumber" type="string"></property>
+ <property name="degree" type="string"></property>
+ <property name="birthdate" type="date">2000-01-01</property>
+ <property name="schoolName" type="string"></property>
+ <property name="schoolDep" type="string"></property>
+ <property name="gender" type="string"></property>
+</object>

@@ -1,0 +1,145 @@
+# --- PLEASE EDIT THE LINES BELOW CORRECTLY ---
+# SOME DESCRIPTIVE TITLE.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2014-12-07 03:32+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0\n"
+"Language-Code: en\n"
+"Language-Name: English\n"
+"Preferred-Encodings: utf-8 latin1\n"
+"Domain: prome.userdata\n"
+
+#: ./userdataschema.py:31
+msgid "College"
+msgstr ""
+
+#: ./userdataschema.py:34
+msgid "Doctor"
+msgstr ""
+
+#: ./userdataschema.py:24
+msgid "Female"
+msgstr ""
+
+#: ./userdataschema.py:29
+msgid "Junior"
+msgstr ""
+
+#: ./userdataschema.py:23
+msgid "Male"
+msgstr ""
+
+#: ./userdataschema.py:33
+msgid "Master"
+msgstr ""
+
+#: ./userdataschema.py:28
+msgid "Primary"
+msgstr ""
+
+#: ./userdataschema.py:30
+msgid "Senior"
+msgstr ""
+
+#: ./userdataschema.py:32
+msgid "University"
+msgstr ""
+
+#. Default: "Please input address in here."
+#: ./userdataschema.py:68
+msgid "help_address"
+msgstr ""
+
+#. Default: "Your date of birth, in the format yyyy-mm-dd"
+#: ./userdataschema.py:50
+msgid "help_birthdate"
+msgstr ""
+
+#. Default: "Please select a degree by your highest degree"
+#: ./userdataschema.py:80
+msgid "help_degree"
+msgstr ""
+
+#. Default: "Are you a girl or a boy?"
+#: ./userdataschema.py:43
+msgid "help_gender"
+msgstr ""
+
+#. Default: "Please input ID card number in here."
+#: ./userdataschema.py:74
+msgid "help_idcardnumber"
+msgstr ""
+
+#. Default: "Leave your mobile phone number so we can reach you."
+#: ./userdataschema.py:62
+msgid "help_mobile"
+msgstr ""
+
+#. Default: "Leave your phone number so we can reach you."
+#: ./userdataschema.py:56
+msgid "help_phone"
+msgstr ""
+
+#. Default: "Please input your school department, if you have."
+#: ./userdataschema.py:93
+msgid "help_schooldep"
+msgstr ""
+
+#. Default: "Please input your highest degree's school name."
+#: ./userdataschema.py:87
+msgid "help_schoolname"
+msgstr ""
+
+#. Default: "input address"
+#: ./userdataschema.py:67
+msgid "label_address"
+msgstr ""
+
+#. Default: "birthdate"
+#: ./userdataschema.py:49
+msgid "label_birthdate"
+msgstr ""
+
+#. Default: "Degree"
+#: ./userdataschema.py:79
+msgid "label_degree"
+msgstr ""
+
+#. Default: "Gender"
+#: ./userdataschema.py:42
+msgid "label_gender"
+msgstr ""
+
+#. Default: "input id card number"
+#: ./userdataschema.py:73
+msgid "label_idcardnumber"
+msgstr ""
+
+#. Default: "Mobile phone number"
+#: ./userdataschema.py:61
+msgid "label_mobile"
+msgstr ""
+
+#. Default: "Telephone number"
+#: ./userdataschema.py:55
+msgid "label_phone"
+msgstr ""
+
+#. Default: "input your school department, if you have."
+#: ./userdataschema.py:92
+msgid "label_schooldep"
+msgstr ""
+
+#. Default: "input your highest's degree school name."
+#: ./userdataschema.py:86
+msgid "label_schoolname"
+msgstr ""
+

@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<object name="portal_properties" meta_type="Plone Properties Tool">
+ <object name="site_properties" meta_type="Plone Property Sheet">
+  <!-- Fields that will be on the form after installation of the product -->
+  <property name="user_registration_fields" type="lines">
+   <element value="gender" />
+   <element value="birthdate" />
+   <element value="phone" />
+   <element value="mobile" />
+   <element value="address" />
+   <element value="idCardNumber" />
+   <element value="degree" />
+   <element value="schoolName" />
+   <element value="schoolDep" />
+  </property>
+ </object>
+</object>
