@@ -4,9 +4,27 @@ from zope.schema.vocabulary import SimpleVocabulary, SimpleTerm
 from plone import api
 from Products.CMFPlone.utils import safe_unicode
 
+from five import grok
+from zope.schema.interfaces import IContextSourceBinder
+from zope.component import queryUtility
+from plone.registry.interfaces import IRegistry
+
 from prome.userdata import MessageFactory as _
 from plone.app.users.userdataschema import IUserDataSchemaProvider
 from plone.app.users.userdataschema import IUserDataSchema
+
+
+@grok.provider(IContextSourceBinder)
+def availableClass(context):
+    registry = queryUtility(IRegistry)
+    terms = []
+    if registry is not None:
+        for className in registry.get('prome.userdata.userdataschema.IPromeClassSetting.classSetup', ()).split('\n'):
+            className_uni = safe_unicode(className)
+            terms.append(SimpleVocabulary.createTerm(className_uni.split(':')[0],
+                                                     className_uni.split(':')[0],
+                                                     className_uni.split(':')[1]))
+    return SimpleVocabulary(terms)
 
 def validateAccept(value):
     if not value == True:
@@ -36,7 +54,8 @@ highestDegree = SimpleVocabulary(
      SimpleTerm(value=u'Doctor', title=_(u'Doctor')),]
     )
 
-#classSetting = api.portal.get_registry_record('prome.userdata.userdataschema.IPromeClassSetting.classSetup')
+
+
 
 class IEnhancedUserDataSchema(IUserDataSchema):
 
@@ -45,14 +64,14 @@ class IEnhancedUserDataSchema(IUserDataSchema):
     extra fields.
     """
 
-    """
     classSetting = schema.Choice(
         title=_(u'label_classSetting', default=u'ClassSetting'),
         description=_(u'help_classSetting',
                       default=u"Class Setting"),
-        vocabulary=classVocabulary(),
+#        vocabulary=availableClass,
+        source=availableClass,
         required=True,
-        )"""
+        )
 
 
 

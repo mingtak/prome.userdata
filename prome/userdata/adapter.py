@@ -4,6 +4,12 @@ from Products.CMFPlone.utils import safe_unicode
 class EnhancedUserDataPanelAdapter(UserDataPanelAdapter):
     """
     """
+    def get_classSetting(self):
+        return self.context.getProperty('classSetting', '')
+    def set_classSetting(self, value):
+        return self.context.setMemberProperties({'classSetting': str(value)})
+    classSetting = property(get_classSetting, set_classSetting)
+
     def get_gender(self):
         return self.context.getProperty('gender', '')
     def set_gender(self, value):
