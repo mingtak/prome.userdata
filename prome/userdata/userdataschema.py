@@ -17,13 +17,68 @@ from plone.app.users.userdataschema import IUserDataSchema
 @grok.provider(IContextSourceBinder)
 def availableClass(context):
     registry = queryUtility(IRegistry)
+    settingValue = registry.get('prome.userdata.userdataschema.IPromeClassSetting.classSetup', ())
     terms = []
     if registry is not None:
-        for className in registry.get('prome.userdata.userdataschema.IPromeClassSetting.classSetup', ()).split('\n'):
-            className_uni = safe_unicode(className)
-            terms.append(SimpleVocabulary.createTerm(className_uni.split(':')[0],
-                                                     className_uni.split(':')[0],
-                                                     className_uni.split(':')[1]))
+        for line in settingValue.split('\n'):
+            topLevel = line.split(':')[0]
+            for item in line.split(':')[1].split(','):
+                itemId, itemName = item.split('-')
+                className = "%s : %s" % (topLevel, item)
+                terms.append(SimpleVocabulary.createTerm(itemId, itemId, safe_unicode(className)))
+    return SimpleVocabulary(terms)
+
+
+def getTerms(settingValue=None):
+    terms = []
+    for line in settingValue.split('\n'):
+        itemId, itemName = line.split('-')
+        terms.append(SimpleVocabulary.createTerm(itemId, itemId, safe_unicode(itemName)))
+    return terms
+
+@grok.provider(IContextSourceBinder)
+def availableTeachingMethod(context):
+    registry = queryUtility(IRegistry)
+    settingValue = registry.get('prome.userdata.userdataschema.IPromeClassSetting.teachingMethod', ())
+    terms = []
+    if registry is not None:
+        terms = getTerms(settingValue)
+    return SimpleVocabulary(terms)
+
+@grok.provider(IContextSourceBinder)
+def availableCourses(context):
+    registry = queryUtility(IRegistry)
+    settingValue = registry.get('prome.userdata.userdataschema.IPromeClassSetting.courses', ())
+    terms = []
+    if registry is not None:
+        terms = getTerms(settingValue)
+    return SimpleVocabulary(terms)
+
+@grok.provider(IContextSourceBinder)
+def availableStudentStatus(context):
+    registry = queryUtility(IRegistry)
+    settingValue = registry.get('prome.userdata.userdataschema.IPromeClassSetting.studentStatus', ())
+    terms = []
+    if registry is not None:
+        terms = getTerms(settingValue)
+    return SimpleVocabulary(terms)
+
+@grok.provider(IContextSourceBinder)
+def availableHowToGetInfo(context):
+    registry = queryUtility(IRegistry)
+    settingValue = registry.get('prome.userdata.userdataschema.IPromeClassSetting.howToGetInfo', ())
+    terms = []
+    if registry is not None:
+        terms = getTerms(settingValue)
+    return SimpleVocabulary(terms)
+
+@grok.provider(IContextSourceBinder)
+def availablePaymentState(context):
+    registry = queryUtility(IRegistry)
+    settingValue = registry.get('prome.userdata.userdataschema.IPromeClassSetting.paymentState', ())
+    terms = []
+    if registry is not None:
+        terms = getTerms(settingValue)
     return SimpleVocabulary(terms)
 
 def validateAccept(value):
@@ -55,28 +110,10 @@ highestDegree = SimpleVocabulary(
     )
 
 
-
-
 class IEnhancedUserDataSchema(IUserDataSchema):
-
-
     """ Use all the fields from the default user data schema, and add various
     extra fields.
     """
-
-    classSetting = schema.Choice(
-        title=_(u'label_classSetting', default=u'ClassSetting'),
-        description=_(u'help_classSetting',
-                      default=u"Class Setting"),
-#        vocabulary=availableClass,
-        source=availableClass,
-        required=True,
-        )
-
-
-
-
-
     gender = schema.Choice(
         title=_(u'label_gender', default=u'Gender'),
         description=_(u'help_gender',
@@ -133,9 +170,48 @@ class IEnhancedUserDataSchema(IUserDataSchema):
                       default=u"Please input your school department, if you have."),
         required=False,
         )
+    classSetting = schema.Choice(
+        title=_(u'label_classSetting', default=u'ClassSetting'),
+        source=availableClass,
+        required=False,
+        )
+    teachingMethod = schema.Choice(
+        title=_(u'label_teachingMethod', default=u'TeachingMethod'),
+        source=availableTeachingMethod,
+        required=False,
+        )
+    courses = schema.Choice(
+        title=_(u'label_courses', default=u'Courses'),
+        source=availableCourses,
+        required=False,
+        )
+    studentStatus = schema.Choice(
+        title=_(u'label_studentStatus', default=u'StudentStatus'),
+        source=availableStudentStatus,
+        required=False,
+        )
+    howToGetInfo = schema.Choice(
+        title=_(u'label_howToGetInfo', default=u'HowToGetInfo'),
+        source=availableHowToGetInfo,
+        required=False,
+        )
+    paymentState = schema.Choice(
+        title=_(u'label_paymentState', default=u'PaymentState'),
+        source=availablePaymentState,
+        required=False,
+        )
+    videoPermission = schema.Bool(
+        title=_(u'label_videoPermission', default=u'Video Permission'),
+        default=False,
+        required=False,
+        )
+    note = schema.Text(
+        title=_(u'label_note', default=u'Note'),
+        required=False,
+        )
 
 
-
+# below configlet
 from plone.app.registry.browser.controlpanel import RegistryEditForm
 from plone.app.registry.browser.controlpanel import ControlPanelFormWrapper
 
@@ -146,6 +222,38 @@ from plone.directives import form as Form
 class IPromeClassSetting(Form.Schema):
     classSetup = schema.Text(
         title=_(u"Class setup"),
+        description=_(u'help_classSetup',
+                      default=u"format is 'top:id1-class1,id2-class2,...'"),
+        required=False,
+    )
+    teachingMethod = schema.Text(
+        title=_(u"Teaching method"),
+        description=_(u'help_normal',
+                      default=u"format is 'id1-class1', per line one record"),
+        required=False,
+    )
+    courses = schema.Text(
+        title=_(u"Courses"),
+        description=_(u'help_normal',
+                      default=u"format is 'id1-class1', per line one record"),
+        required=False,
+    )
+    studentStatus = schema.Text(
+        title=_(u"Student status"),
+        description=_(u'help_normal',
+                      default=u"format is 'id1-class1', per line one record"),
+        required=False,
+    )
+    howToGetInfo = schema.Text(
+        title=_(u"How to get information"),
+        description=_(u'help_normal',
+                      default=u"format is 'id1-class1', per line one record"),
+        required=False,
+    )
+    paymentState = schema.Text(
+        title=_(u"Payment state"),
+        description=_(u'help_normal',
+                      default=u"format is 'id1-class1', per line one record"),
         required=False,
     )
 

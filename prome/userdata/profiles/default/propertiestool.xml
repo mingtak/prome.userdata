@@ -8,7 +8,7 @@
    <element value="phone" />
    <element value="mobile" />
    <element value="address" />
-   <element value="idCardNumber" />
+<!--   <element value="idCardNumber" /> -->
    <element value="degree" />
    <element value="schoolName" />
    <element value="schoolDep" />

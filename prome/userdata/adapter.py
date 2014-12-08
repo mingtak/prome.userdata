@@ -4,10 +4,52 @@ from Products.CMFPlone.utils import safe_unicode
 class EnhancedUserDataPanelAdapter(UserDataPanelAdapter):
     """
     """
+    def get_videoPermission(self):
+        return self.context.getProperty('videoPermission', '')
+    def set_videoPermission(self, value):
+        return self.context.setMemberProperties({'videoPermission': value})
+    videoPermission = property(get_videoPermission, set_videoPermission)
+
+    def get_teachingMethod(self):
+        return self.context.getProperty('teachingMethod', '')
+    def set_teachingMethod(self, value):
+        return self.context.setMemberProperties({'teachingMethod': str(value)})
+    teachingMethod = property(get_teachingMethod, set_teachingMethod)
+
+    def get_courses(self):
+        return self.context.getProperty('courses', '')
+    def set_courses(self, value):
+        return self.context.setMemberProperties({'courses': str(value)})
+    courses = property(get_courses, set_courses)
+
+    def get_studentStatus(self):
+        return self.context.getProperty('studentStatus', '')
+    def set_studentStatus(self, value):
+        return self.context.setMemberProperties({'studentStatus': str(value)})
+    studentStatus = property(get_studentStatus, set_studentStatus)
+
+    def get_howToGetInfo(self):
+        return self.context.getProperty('howToGetInfo', '')
+    def set_howToGetInfo(self, value):
+        return self.context.setMemberProperties({'howToGetInfo': str(value)})
+    howToGetInfo = property(get_howToGetInfo, set_howToGetInfo)
+
+    def get_paymentState(self):
+        return self.context.getProperty('paymentState', '')
+    def set_paymentState(self, value):
+        return self.context.setMemberProperties({'paymentState': str(value)})
+    paymentState = property(get_paymentState, set_paymentState)
+
+    def get_note(self):
+        return self.context.getProperty('note', '')
+    def set_note(self, value):
+        return self.context.setMemberProperties({'note': str(value)})
+    note = property(get_note, set_note)
+
     def get_classSetting(self):
         return self.context.getProperty('classSetting', '')
     def set_classSetting(self, value):
-        return self.context.setMemberProperties({'classSetting': str(value)})
+        return self.context.setMemberProperties({'classSetting': value})
     classSetting = property(get_classSetting, set_classSetting)
 
     def get_gender(self):

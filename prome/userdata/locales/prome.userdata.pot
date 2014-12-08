@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2014-12-07 03:32+0000\n"
+"POT-Creation-Date: 2014-12-08 16:19+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,129 +17,211 @@ msgstr ""
 "Preferred-Encodings: utf-8 latin1\n"
 "Domain: prome.userdata\n"
 
-#: ./userdataschema.py:31
+#: ./userdataschema.py:224
+msgid "Class setup"
+msgstr ""
+
+#: ./userdataschema.py:106
 msgid "College"
 msgstr ""
 
-#: ./userdataschema.py:34
+#: ./userdataschema.py:236
+msgid "Courses"
+msgstr ""
+
+#: ./userdataschema.py:109
 msgid "Doctor"
 msgstr ""
 
-#: ./userdataschema.py:24
+#: ./userdataschema.py:99
 msgid "Female"
 msgstr ""
 
-#: ./userdataschema.py:29
+#: ./userdataschema.py:248
+msgid "How to get information"
+msgstr ""
+
+#: ./userdataschema.py:104
 msgid "Junior"
 msgstr ""
 
-#: ./userdataschema.py:23
+#: ./userdataschema.py:98
 msgid "Male"
 msgstr ""
 
-#: ./userdataschema.py:33
+#: ./userdataschema.py:108
 msgid "Master"
 msgstr ""
 
-#: ./userdataschema.py:28
+#: ./userdataschema.py:254
+msgid "Payment state"
+msgstr ""
+
+#: ./userdataschema.py:103
 msgid "Primary"
 msgstr ""
 
-#: ./userdataschema.py:30
+#: ./userdataschema.py:266
+msgid "Prome class setting"
+msgstr ""
+
+#: ./profiles/default/controlpanel.xml
+msgid "Prome class setup"
+msgstr ""
+
+#: ./userdataschema.py:105
 msgid "Senior"
 msgstr ""
 
-#: ./userdataschema.py:32
+#: ./userdataschema.py:242
+msgid "Student status"
+msgstr ""
+
+#: ./userdataschema.py:230
+msgid "Teaching method"
+msgstr ""
+
+#: ./userdataschema.py:107
 msgid "University"
 msgstr ""
 
 #. Default: "Please input address in here."
-#: ./userdataschema.py:68
+#: ./userdataschema.py:144
 msgid "help_address"
 msgstr ""
 
 #. Default: "Your date of birth, in the format yyyy-mm-dd"
-#: ./userdataschema.py:50
+#: ./userdataschema.py:126
 msgid "help_birthdate"
 msgstr ""
 
+#. Default: "format is 'top:id1-class1,id2-class2,...'"
+#: ./userdataschema.py:225
+msgid "help_classSetup"
+msgstr ""
+
 #. Default: "Please select a degree by your highest degree"
-#: ./userdataschema.py:80
+#: ./userdataschema.py:156
 msgid "help_degree"
 msgstr ""
 
 #. Default: "Are you a girl or a boy?"
-#: ./userdataschema.py:43
+#: ./userdataschema.py:119
 msgid "help_gender"
 msgstr ""
 
 #. Default: "Please input ID card number in here."
-#: ./userdataschema.py:74
+#: ./userdataschema.py:150
 msgid "help_idcardnumber"
 msgstr ""
 
 #. Default: "Leave your mobile phone number so we can reach you."
-#: ./userdataschema.py:62
+#: ./userdataschema.py:138
 msgid "help_mobile"
 msgstr ""
 
+#. Default: "format is 'id1-class1', per line one record"
+#: ./userdataschema.py:231
+msgid "help_normal"
+msgstr ""
+
 #. Default: "Leave your phone number so we can reach you."
-#: ./userdataschema.py:56
+#: ./userdataschema.py:132
 msgid "help_phone"
 msgstr ""
 
 #. Default: "Please input your school department, if you have."
-#: ./userdataschema.py:93
+#: ./userdataschema.py:169
 msgid "help_schooldep"
 msgstr ""
 
 #. Default: "Please input your highest degree's school name."
-#: ./userdataschema.py:87
+#: ./userdataschema.py:163
 msgid "help_schoolname"
 msgstr ""
 
 #. Default: "input address"
-#: ./userdataschema.py:67
+#: ./userdataschema.py:143
 msgid "label_address"
 msgstr ""
 
 #. Default: "birthdate"
-#: ./userdataschema.py:49
+#: ./userdataschema.py:125
 msgid "label_birthdate"
 msgstr ""
 
+#. Default: "ClassSetting"
+#: ./userdataschema.py:174
+msgid "label_classSetting"
+msgstr ""
+
+#. Default: "Courses"
+#: ./userdataschema.py:184
+msgid "label_courses"
+msgstr ""
+
 #. Default: "Degree"
-#: ./userdataschema.py:79
+#: ./userdataschema.py:155
 msgid "label_degree"
 msgstr ""
 
 #. Default: "Gender"
-#: ./userdataschema.py:42
+#: ./userdataschema.py:118
 msgid "label_gender"
 msgstr ""
 
+#. Default: "HowToGetInfo"
+#: ./userdataschema.py:194
+msgid "label_howToGetInfo"
+msgstr ""
+
 #. Default: "input id card number"
-#: ./userdataschema.py:73
+#: ./userdataschema.py:149
 msgid "label_idcardnumber"
 msgstr ""
 
 #. Default: "Mobile phone number"
-#: ./userdataschema.py:61
+#: ./userdataschema.py:137
 msgid "label_mobile"
 msgstr ""
 
+#. Default: "Note"
+#: ./userdataschema.py:209
+msgid "label_note"
+msgstr ""
+
+#. Default: "PaymentState"
+#: ./userdataschema.py:199
+msgid "label_paymentState"
+msgstr ""
+
 #. Default: "Telephone number"
-#: ./userdataschema.py:55
+#: ./userdataschema.py:131
 msgid "label_phone"
 msgstr ""
 
 #. Default: "input your school department, if you have."
-#: ./userdataschema.py:92
+#: ./userdataschema.py:168
 msgid "label_schooldep"
 msgstr ""
 
 #. Default: "input your highest's degree school name."
-#: ./userdataschema.py:86
+#: ./userdataschema.py:162
 msgid "label_schoolname"
+msgstr ""
+
+#. Default: "StudentStatus"
+#: ./userdataschema.py:189
+msgid "label_studentStatus"
+msgstr ""
+
+#. Default: "TeachingMethod"
+#: ./userdataschema.py:179
+msgid "label_teachingMethod"
+msgstr ""
+
+#. Default: "Video Permission"
+#: ./userdataschema.py:204
+msgid "label_videoPermission"
 msgstr ""
 

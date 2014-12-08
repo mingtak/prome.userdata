@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2014-12-07 03:32+0000\n"
+"POT-Creation-Date: 2014-12-08 16:19+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -14,130 +14,212 @@ msgstr ""
 "Preferred-Encodings: utf-8 latin1\n"
 "Domain: DOMAIN\n"
 
-#: ./userdataschema.py:31
+#: ./userdataschema.py:224
+msgid "Class setup"
+msgstr "課程設定"
+
+#: ./userdataschema.py:106
 msgid "College"
 msgstr "專科"
 
-#: ./userdataschema.py:34
+#: ./userdataschema.py:236
+msgid "Courses"
+msgstr "課程別"
+
+#: ./userdataschema.py:109
 msgid "Doctor"
 msgstr "博士"
 
-#: ./userdataschema.py:24
+#: ./userdataschema.py:99
 msgid "Female"
 msgstr "女士"
 
-#: ./userdataschema.py:29
+#: ./userdataschema.py:248
+msgid "How to get information"
+msgstr "何種管理得知訊息"
+
+#: ./userdataschema.py:104
 msgid "Junior"
 msgstr "國中"
 
-#: ./userdataschema.py:23
+#: ./userdataschema.py:98
 msgid "Male"
 msgstr "先生"
 
-#: ./userdataschema.py:33
+#: ./userdataschema.py:108
 msgid "Master"
 msgstr "碩士"
 
+#: ./userdataschema.py:254
+msgid "Payment state"
+msgstr "繳費紀錄"
+
 #. Default: "Primary"
-#: ./userdataschema.py:28
+#: ./userdataschema.py:103
 msgid "Primary"
 msgstr "小學"
 
-#: ./userdataschema.py:30
+#: ./userdataschema.py:266
+msgid "Prome class setting"
+msgstr "博明課程相關設定"
+
+#: ./profiles/default/controlpanel.xml
+msgid "Prome class setup"
+msgstr "博明課程相關設定"
+
+#: ./userdataschema.py:105
 msgid "Senior"
 msgstr "高中"
 
-#: ./userdataschema.py:32
+#: ./userdataschema.py:242
+msgid "Student status"
+msgstr "身份別"
+
+#: ./userdataschema.py:230
+msgid "Teaching method"
+msgstr "授課方式"
+
+#: ./userdataschema.py:107
 msgid "University"
 msgstr "大學"
 
 #. Default: "Please input address in here."
-#: ./userdataschema.py:68
+#: ./userdataschema.py:144
 msgid "help_address"
 msgstr "請輸入地址"
 
 #. Default: "Your date of birth, in the format yyyy-mm-dd"
-#: ./userdataschema.py:50
+#: ./userdataschema.py:126
 msgid "help_birthdate"
 msgstr "出生年月日,格式為yyyy-mm-dd"
 
+#. Default: "format is 'top:id1-class1,id2-class2,...'"
+#: ./userdataschema.py:225
+msgid "help_classSetup"
+msgstr "格式為「大分類名稱:id1-小分類1,id2-小分類2,...」其中id及「:,-」等符號需為 英數/半型 ，且不留空白，每個大分類一行。範例：「職業訓練:A01-職前訓練,A02-在職訓練」"
+
 #. Default: "Please select a degree by your highest degree"
-#: ./userdataschema.py:80
+#: ./userdataschema.py:156
 msgid "help_degree"
 msgstr "請選擇您的最高學歷"
 
 #. Default: "Are you a girl or a boy?"
-#: ./userdataschema.py:43
+#: ./userdataschema.py:119
 msgid "help_gender"
 msgstr "請問您是先生或女士"
 
 #. Default: "Please input ID card number in here."
-#: ./userdataschema.py:74
+#: ./userdataschema.py:150
 msgid "help_idcardnumber"
 msgstr "請輸入身份證字號"
 
 #. Default: "Leave your mobile phone number so we can reach you."
-#: ./userdataschema.py:62
+#: ./userdataschema.py:138
 msgid "help_mobile"
 msgstr "請輸入手機號碼"
 
+#. Default: "format is 'id1-class1', per line one record"
+#: ./userdataschema.py:231
+msgid "help_normal"
+msgstr "格式：「id-選項」，其中id及符號「-」需為 英數/半型 ，範例：「A01-選項名稱」，一行一筆紀錄。"
+
 #. Default: "Leave your phone number so we can reach you."
-#: ./userdataschema.py:56
+#: ./userdataschema.py:132
 msgid "help_phone"
 msgstr "請輸入室內電話號碼"
 
 #. Default: "Please input your school department, if you have."
-#: ./userdataschema.py:93
+#: ./userdataschema.py:169
 msgid "help_schooldep"
 msgstr "請輸入就讀科系"
 
 #. Default: "Please input your highest degree's school name."
-#: ./userdataschema.py:87
+#: ./userdataschema.py:163
 msgid "help_schoolname"
 msgstr "請輸入高最學歷校名"
 
 #. Default: "input address"
-#: ./userdataschema.py:67
+#: ./userdataschema.py:143
 msgid "label_address"
 msgstr "輸入地址"
 
 #. Default: "birthdate"
-#: ./userdataschema.py:49
+#: ./userdataschema.py:125
 msgid "label_birthdate"
 msgstr "生日"
 
+#. Default: "ClassSetting"
+#: ./userdataschema.py:174
+msgid "label_classSetting"
+msgstr "課程設定"
+
+#. Default: "Courses"
+#: ./userdataschema.py:184
+msgid "label_courses"
+msgstr "課程別"
+
 #. Default: "Degree"
-#: ./userdataschema.py:79
+#: ./userdataschema.py:155
 msgid "label_degree"
 msgstr "學歷"
 
 #. Default: "Gender"
-#: ./userdataschema.py:42
+#: ./userdataschema.py:118
 msgid "label_gender"
 msgstr "性別"
 
+#. Default: "HowToGetInfo"
+#: ./userdataschema.py:194
+msgid "label_howToGetInfo"
+msgstr "如何得知訊息"
+
 #. Default: "input id card number"
-#: ./userdataschema.py:73
+#: ./userdataschema.py:149
 msgid "label_idcardnumber"
 msgstr "身份證字號"
 
 #. Default: "Mobile phone number"
-#: ./userdataschema.py:61
+#: ./userdataschema.py:137
 msgid "label_mobile"
 msgstr "手機號碼"
 
+#. Default: "Note"
+#: ./userdataschema.py:209
+msgid "label_note"
+msgstr "備註"
+
+#. Default: "PaymentState"
+#: ./userdataschema.py:199
+msgid "label_paymentState"
+msgstr "繳費紀錄"
+
 #. Default: "Telephone number"
-#: ./userdataschema.py:55
+#: ./userdataschema.py:131
 msgid "label_phone"
 msgstr "住家電話"
 
 #. Default: "input your school department, if you have."
-#: ./userdataschema.py:92
+#: ./userdataschema.py:168
 msgid "label_schooldep"
 msgstr "請輸入就讀科系"
 
 #. Default: "input your highest's degree school name."
-#: ./userdataschema.py:86
+#: ./userdataschema.py:162
 msgid "label_schoolname"
 msgstr "請輸入最高學歷學校名稱"
+
+#. Default: "StudentStatus"
+#: ./userdataschema.py:189
+msgid "label_studentStatus"
+msgstr "身份別"
+
+#. Default: "TeachingMethod"
+#: ./userdataschema.py:179
+msgid "label_teachingMethod"
+msgstr "授課方式"
+
+#. Default: "Video Permission"
+#: ./userdataschema.py:204
+msgid "label_videoPermission"
+msgstr "視訊權限"
 

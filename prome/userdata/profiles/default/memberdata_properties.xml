@@ -9,4 +9,12 @@
  <property name="schoolName" type="string"></property>
  <property name="schoolDep" type="string"></property>
  <property name="gender" type="string"></property>
+ <property name="classSetting" type="string"></property>
+ <property name="teachingMethod" type="string"></property>
+ <property name="courses" type="string"></property>
+ <property name="studentStatus" type="string"></property>
+ <property name="howToGetInfo" type="string"></property>
+ <property name="paymentState" type="string"></property>
+ <property name="note" type="string"></property>
+ <property name="videoPermission" type="bool">False</property>
 </object>
