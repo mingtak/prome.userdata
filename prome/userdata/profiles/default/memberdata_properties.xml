@@ -16,5 +16,5 @@
  <property name="howToGetInfo" type="string"></property>
  <property name="paymentState" type="string"></property>
  <property name="note" type="string"></property>
- <property name="videoPermission" type="bool">False</property>
+ <property name="videoPermission" type="boolean">False</property>
 </object>
